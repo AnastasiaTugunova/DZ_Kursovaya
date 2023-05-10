@@ -6,7 +6,7 @@ import urllib
 from tqdm import tqdm
 
 # Отправка фотографий по созданному списку из DR
-# bot_token = ('6015892780:AAFnS3Fx7R5ZJeX4akabdqy0o8mDZclFLqY')
+# bot_token = ('')
 # bot = telebot.TeleBot(bot_token)
 #
 # @bot.message_handler(commands=['start', 'hello'])
@@ -58,7 +58,7 @@ class PhotoVk:
             url_photo.append(photo_items[i]['sizes'][-1]['url'])
             type_photo.append(photo_items[i]['sizes'][-1]['type'])
 
-            # bot.send_photo(770552448, url_list[i]) бот Телеграма, отправка фотографий по списку
+            # bot.send_photo(id, url_list[i]) бот Телеграма, отправка фотографий по списку
 
         dicts = [dict(zip(keys, values)) for values in zipped]
         return dicts
