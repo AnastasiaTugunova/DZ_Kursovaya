@@ -1,9 +1,10 @@
-import requests
 from datetime import datetime
 import json
-import time
 import urllib
+import requests
+import time
 from tqdm import tqdm
+
 
 # Отправка фотографий по созданному списку из DR
 # bot_token = ('')
