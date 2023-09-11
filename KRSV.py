@@ -1,19 +1,10 @@
-from datetime import datetime
 import json
-import urllib
-import requests
 import time
+import urllib
+from datetime import datetime
+
+import requests
 from tqdm import tqdm
-
-
-# Отправка фотографий по созданному списку из DR
-# bot_token = ('')
-# bot = telebot.TeleBot(bot_token)
-#
-# @bot.message_handler(commands=['start', 'hello'])
-# def send_welcome(message):
-#     bot.reply_to(message, "Howdy, how are you doing?")
-
 
 def read_token_vk():
     with open('Token_VK.txt', 'r') as fale:
@@ -58,8 +49,6 @@ class PhotoVk:
             likes_in_photo.append(photo_items[i]['likes']['count'])
             url_photo.append(photo_items[i]['sizes'][-1]['url'])
             type_photo.append(photo_items[i]['sizes'][-1]['type'])
-
-            # bot.send_photo(id, url_list[i]) бот Телеграма, отправка фотографий по списку
 
         dicts = [dict(zip(keys, values)) for values in zipped]
         return dicts
